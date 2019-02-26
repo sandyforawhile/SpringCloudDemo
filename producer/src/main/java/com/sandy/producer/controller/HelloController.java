@@ -1,6 +1,9 @@
 package com.sandy.producer.controller;
 
+import io.swagger.annotations.Api;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,11 +15,12 @@ import org.springframework.web.bind.annotation.RestController;
  * @Description: //TODO
  */
 
+@Api
 @RestController
 public class HelloController {
 
 
-    @RequestMapping("/hello")
+    @RequestMapping(value = "/hello", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public String index(@RequestParam String name){
         return "Hello " + name + ", this is first message.";
     }
