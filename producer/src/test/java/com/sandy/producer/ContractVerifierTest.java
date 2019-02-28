@@ -27,7 +27,6 @@ public class ContractVerifierTest extends MvcMockTest {
 			assertThat(response.header("Content-Type")).isEqualTo("application/json;charset=UTF-8");
 		// and:
 			DocumentContext parsedJson = JsonPath.parse(response.getBody().asString());
-			//System.out.println("##########" + parsedJson);
 			assertThatJson(parsedJson).field("['name']").isEqualTo("sandyforawhile");
 			assertThatJson(parsedJson).field("['message']").isEqualTo("success");
 	}
