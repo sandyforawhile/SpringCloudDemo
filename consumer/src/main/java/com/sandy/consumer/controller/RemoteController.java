@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
-public class FeignController {
+public class RemoteController {
 
     @Autowired
     private Iservice iservice;

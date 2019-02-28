@@ -13,7 +13,7 @@ import static org.springframework.cloud.contract.verifier.assertion.SpringCloudC
 public class ContractVerifierTest extends MvcMockTest {
 
 	@Test
-	public void validate_helloController() throws Exception {
+	public void validate_helloController() {
 		// given:
 			MockMvcRequestSpecification request = given();
 
