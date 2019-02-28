@@ -25,7 +25,7 @@ import java.util.Map;
 public class HelloController {
 
 
-    @RequestMapping(value = "/hello", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE+";charset=UTF-8")
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public Map<String,String> index(@RequestParam String name){
 
         Map<String,String> resMap = new HashMap<>();
